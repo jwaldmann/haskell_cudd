@@ -7,7 +7,7 @@ module Cudd.Common (
     ) where
 
 #include <stdio.h>
-#include "cudd.h"
+#include "cudd/cudd.h"
 
 data SatBit = Zero | One | DontCare deriving (Eq)
 

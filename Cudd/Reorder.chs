@@ -50,7 +50,7 @@ import Cudd.Hook
 import Cudd.Imperative
 
 #include <stdio.h>
-#include <cudd.h>
+#include <cudd/cudd.h>
 
 readIntegral :: (Integral i, Num j) => (Ptr CDDManager -> IO i) -> DDManager s u -> ST s j
 readIntegral f (DDManager m) = unsafeIOToST $ liftM fromIntegral $ f m

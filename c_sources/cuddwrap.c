@@ -2,8 +2,8 @@
 #include <math.h>
 #include <assert.h>
 
-#include "util.h"
-#include "cudd.h"
+#include "cudd/util.h"
+#include "cudd/cudd.h"
 
 //Function wrappers around macros
 DdNode *wrappedRegular(DdNode *f){

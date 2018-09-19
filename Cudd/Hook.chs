@@ -22,7 +22,7 @@ import Cudd.C
 import Cudd.Imperative
 
 #include <stdio.h>
-#include <cudd.h>
+#include <cudd/cudd.h>
 
 {#enum Cudd_HookType as CuddHookType {underscoreToCase} deriving (Show, Eq) #}
 

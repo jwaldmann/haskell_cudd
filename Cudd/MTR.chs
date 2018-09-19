@@ -28,7 +28,7 @@ import Control.Monad.ST
 import Control.Monad.ST.Unsafe
 
 #include <stdio.h>
-#include <mtr.h>
+#include <cudd/mtr.h>
 
 data CMtrNode 
 newtype MtrNode s = MtrNode (Ptr CMtrNode)

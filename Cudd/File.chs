@@ -19,7 +19,7 @@ import Control.Monad
 import Cudd.Cudd
 import Cudd.C
 
-#include "dddmp.h"
+#include "cudd/dddmp.h"
 
 {#enum Dddmp_VarInfoType as DddmpVarInfoType {underscoreToCase} #}
 
