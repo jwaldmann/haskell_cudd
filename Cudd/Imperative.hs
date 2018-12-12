@@ -391,7 +391,9 @@ countMintermExact (DDManager m) (DDNode x) n = unsafeIOToST $
     size <- fromIntegral <$> peek sizep
     digits <- peekArray size apa
     c_cuddFreeApaNumber apa
-    return $ foldl ( \ a d -> a * 2^32 + fromIntegral d ) 0 digits
+    let patch :: CInt -> Integer
+        patch d = fromIntegral d + if d < 0 then 2^32 else 0
+    return $ foldl ( \ a d -> a * 2^32 + patch d ) 0 digits
 
 checkCube :: DDManager s u -> DDNode s u -> ST s Bool
 checkCube (DDManager m) (DDNode x) = liftM (==1) $ unsafeIOToST $ c_cuddCheckCube m x
