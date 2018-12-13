@@ -299,10 +299,10 @@ foreign import ccall safe "Cudd_CountMinterm"
     c_cuddCountMinterm :: Ptr CDDManager -> Ptr CDDNode -> CInt -> IO CDouble
 
 foreign import ccall safe "Cudd_FreeApaNumber"
-    c_cuddFreeApaNumber :: Ptr CInt -> IO () 
+    c_cuddFreeApaNumber :: Ptr CUInt -> IO () 
 
 foreign import ccall safe "Cudd_ApaCountMinterm"
-    c_cuddApaCountMinterm :: Ptr CDDManager -> Ptr CDDNode -> CInt -> Ptr CInt -> IO (Ptr CInt)
+    c_cuddApaCountMinterm :: Ptr CDDManager -> Ptr CDDNode -> CInt -> Ptr CInt -> IO (Ptr CUInt)
 
 foreign import ccall safe "Cudd_CountPathsToNonZero"
     c_cuddCountPathsToNonZero :: Ptr CDDNode -> IO CDouble
